@@ -1,3 +1,6 @@
+# texmaker session File
+*.tks
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
