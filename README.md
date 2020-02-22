@@ -1,2 +1,2 @@
 # Python
-Zusammenfassung der Python Vorlesung &amp; Sammlung von Beispielcode
+Zusammenfassung der Python Vorlesung FS2020 &amp; Sammlung von Beispielcode
