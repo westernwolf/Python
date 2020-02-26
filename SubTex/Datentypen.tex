@@ -1,0 +1,36 @@
+\section{Datentypen}
+\begin{tabular}{ lll }
+	\hline
+	\textbf{Datentyp} & \textbf{Beschreibung} & \textbf{False-Wert}\\
+	\hline
+	NoneType & Indikator für nichts, keinen Wert & None \\
+	\hline
+	\multicolumn{3}{l}{\textbf{Numerische Datentypen}}\\
+	int&Ganze Zahlen & 0\\
+	float&Gleitkommazahlen&0.0\\
+	bool&Boolesche Werte&False\\
+	complex&komplexe Zahlen& 0 + 0j\\
+	\hline
+	\multicolumn{3}{l}{\textbf{Sequenzielle Datentypen}}\\
+	str&Zeichenketten oder Strings&' '\\
+	list&Listen (veränderlich)&[]\\
+	tuple&Tupel(unveränderlich)&()\\
+	bytes&Sequenz von Bytes (unveränderlich)&b' '\\
+	bytearray&Sequenz von Bytes (veränderlich)&bytearray(b' ')\\
+   \hline
+   \multicolumn{3}{l}{\textbf{Mengen}}\\
+   set&Menge mit einmalig vorkommenden Objektion&set()\\
+   frozenset& Wie set jedoch unveränderlich&frozenset()\\
+   \hline
+   \multicolumn{3}{l}{\textbf{Assoziative Datentypen}}\\
+   dict&Dictionary (Schlüssel-Wert-Paare)&\{\}\\
+   \hline
+\end{tabular}
+
+Nummerische Datentypen können "nur" Zahlenwerte annehmen.\\
+Sequenzielle Datentypen sind vergleichbar mit Arrays. Werte können mehrmals vorkommen
+und jeder einzelne besitzt einen spezifischen Index.\\
+Mengen sind vergleichbar mit mathematischen Mengen, jedes Element ist einzigartig
+und die Reihenfolge ist willkürlich.\\
+Assoziative Datentypen sind ähnlich wie die Sequenziellen Datentypen, jedoch besitzen sie 
+keinen nummerischen Index, aber Keys aus (unveränderlichen) Datentypen.
