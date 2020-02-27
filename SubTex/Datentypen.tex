@@ -1,4 +1,19 @@
 \section{Datentypen}
+%\begin{lstlisting}
+%Put your code here.
+%\end{lstlisting}
+
+\begin{itemize}
+\item Python erkennt den Datentyp automatisch
+\item Variablen sind \textbf{immer} Referenzen auf Objekte
+	\lstinputlisting[language=Python, firstline=2, lastline=2]{SubTex/Code/DatenTypen.py}
+\item Wert- und Typänderung während der Laufzeit erlaubt, da ein neues Objekt referenziert wird
+\item Datentypen prüfen:
+	\lstinputlisting[language=Python, firstline=6, lastline=7]{SubTex/Code/DatenTypen.py}
+\item Python achtet auf Typverletzungen
+\item Python kennt keine implizite Typumwandlung
+\end{itemize}
+
 \begin{tabular}{ lll }
 	\hline
 	\textbf{Datentyp} & \textbf{Beschreibung} & \textbf{False-Wert}\\
@@ -27,10 +42,77 @@
    \hline
 \end{tabular}
 
-Nummerische Datentypen können "nur" Zahlenwerte annehmen.\\
+Nummerische Datentypen können \glqq{}nur\grqq{} Zahlenwerte annehmen.\\
 Sequenzielle Datentypen sind vergleichbar mit Arrays. Werte können mehrmals vorkommen
 und jeder einzelne besitzt einen spezifischen Index.\\
 Mengen sind vergleichbar mit mathematischen Mengen, jedes Element ist einzigartig
 und die Reihenfolge ist willkürlich.\\
 Assoziative Datentypen sind ähnlich wie die Sequenziellen Datentypen, jedoch besitzen sie 
 keinen nummerischen Index, aber Keys aus (unveränderlichen) Datentypen.
+
+\subsection{Nummerische Datentypen - Arithmetische Operatoren}
+	\begin{tabular}{ cl }
+	\hline
+	\textbf{Operator} & \textbf{Beschreibung}\\
+	\hline
+	$x+y$& Summe von $x$ und $y$\\
+	$x-y$& Differenz von $x$ und $y$\\
+	$x*y$& Produkt von $x$ und $y$\\
+	$x/y$& Quotient von $x$ und $y$\\
+	$x//y$& Ganzzahliger Quotient von $x$ und $y$\\
+	$x\%y$& Rest der Division von $x$ durch $y$\\
+	$+x$& Positives Vorzeichen\\
+	$-x$& Negatives Vorzeichen\\
+	$abs(x)$& Betrag von $x$\\
+	$x**y$& Potenzieren, $x^y$\\
+	\hline
+	\end{tabular}
+	\\
+	{\color{red}Achtung:} $x++$ und $x--$ existieren \textbf{nicht}, aber $x+=1, x-=1, x*=2, \cdots$\\
+	Bitweise Operatoren sind vergleichbar mit C:
+	\begin{itemize}
+	\item Vergleichende Operatoren ($==, !=, <=, \dots$)
+	\item Bitweise Operatoren ($\&, |, \land, \dots$)
+	\end{itemize}
+	
+	Zahlen werden nicht verändert, es wird ein neues Python-Objekt erstellt.
+	
+\subsection{Sequentielle Datentypen}
+	\lstinputlisting[language=Python, firstline=9, lastline=13]{SubTex/Code/DatenTypen.py}
+	Wenn ein String verändert wird, wird ein neues Python-Objekt erstellt.
+	
+	\lstinputlisting[language=Python, firstline=15, lastline=16]{SubTex/Code/DatenTypen.py}
+	Listen können beliebige Datentypen enthalten
+	\lstinputlisting[language=Python, firstline=18, lastline=19]{SubTex/Code/DatenTypen.py}
+	Tuples sind wie Listen, jedoch sind Tuples fix und können nicht mehr verändert werden. Aber die Werte
+	einer z.B. Liste die ein Element des Tuples ist kann verändert werden, da das Element an sich
+	nicht ändert
+	\lstinputlisting[language=Python, firstline=21, lastline=21]{SubTex/Code/DatenTypen.py}
+	Tupel/Liste unpacking, funktioniert wie bei Funktionen, für jeden Rückgabewert kann man eine Variable
+	(mit Komma abgetrent) hinzufügen, die diesen Wert annimmt.\\
+	Sequentielle Datentypen sind alle indexierbar. 
+	Der Index startet immer bei Null. Man indexiert mit eckigen Klammern (\[\]). Man kann über negative Indices Rückwärts indizieren.
+	\subsubsection{Sliccing}
+	Der Startwert ist inklusive, der Endwert ist exklusive.
+	\lstinputlisting[language=Python, firstline=27, lastline=27]{SubTex/Code/DatenTypen.py}
+	
+	Beim Slicing gibt es keine Fehlermeldung wie Out of Bounds es gibt (falls der Bereich kommplett ausserhalb liegt)
+	nur den Leeren Typ zurück.\\
+	Beim Slicing kann wie folgt gekürzt werden:
+	\lstinputlisting[language=Python, firstline=29, lastline=31]{SubTex/Code/DatenTypen.py}
+	
+\subsection{set/frozenset}
+\begin{itemize}
+\item ungeordnete, unindexierte, veränderliche Sammlung von unveränderlichen Elementen
+\item Jedes Element kommt nur einmal vor
+\item Frozensets sind unveränderlich 
+\end{itemize}
+\lstinputlisting[language=Python, firstline=33, lastline=34]{SubTex/Code/DatenTypen.py}
+
+\subsection{Assoziative Datentypen - Dictionary}
+\lstinputlisting[language=Python, firstline=37, lastline=42]{SubTex/Code/DatenTypen.py}
+\begin{itemize}
+\item Ugeordnete Sammlung von Schlüssel-Wert-Paaren
+\item Jeder Schlüssel kommt nur einmal vor
+\item Schlüssel-Objekt muss immutable(unveränderlich) sein (int, float, string, bool, tuple)
+\end{itemize}
