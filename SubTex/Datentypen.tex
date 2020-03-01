@@ -109,6 +109,10 @@ keinen nummerischen Index, aber Keys aus (unveränderlichen) Datentypen.
 \end{itemize}
 \lstinputlisting[language=Python, firstline=33, lastline=34]{SubTex/Code/DatenTypen.py}
 
+\subsubsection{\kom{set} Funktionen}
+\lstinputlisting[language=Python, firstline=47, lastline=64]{SubTex/Code/DatenTypen.py}
+
+
 \subsection{Assoziative Datentypen - Dictionary}
 \lstinputlisting[language=Python, firstline=37, lastline=42]{SubTex/Code/DatenTypen.py}
 \begin{itemize}
@@ -116,3 +120,11 @@ keinen nummerischen Index, aber Keys aus (unveränderlichen) Datentypen.
 \item Jeder Schlüssel kommt nur einmal vor
 \item Schlüssel-Objekt muss immutable(unveränderlich) sein (int, float, string, bool, tuple)
 \end{itemize}
+
+\subsubsection{\kom{Dictionary} Funktionen}
+Die Elemente eines Dictionary können ähnlich wie bei einem Array addreassiert werden, nur dass Keys und nicht indizes verwendet werden.
+\lstinputlisting[language=Python, firstline=73, lastline=74]{SubTex/Code/DatenTypen.py}
+Jedoch gibt diese Art vom addressieren einen Key-Error. Besser ist die get-Funktion.
+
+\lstinputlisting[language=Python, firstline=76, lastline=76]{SubTex/Code/DatenTypen.py}
+Mit dieser Funktion kann man eine Rückgabe definieren, falls der Key nicht vorhanden ist.

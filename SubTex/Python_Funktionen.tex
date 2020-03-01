@@ -1,0 +1,34 @@
+\section{Python Funktionen}
+Dieses Kapitel befasst sich mit Python-Standart-Funktionen.
+
+\subsection{Typen}
+Da Python Typen nicht implizit umwandeln kann,müssen sie explizit umgewandelt werden.
+\begin{itemize}
+\item[list] wandelt iterierbare Datentypen in eine Liste um
+\item[tuple] wandelt iterierbare Datentypen in ein Tupel um
+\item[string] wandelt Datentypen in Strings um (bei Listen u.ä. werden die
+Entsprechenden Klammern und Kommatas mit übernommen)
+\item[int] wandelt (Strings und Floats) in Integer um (Strings müssen zahlen mit Basis 10 sein)
+\item[float] wandelt (Strings und Integer) in Floats um (Strings müssen Basis 10 sein und wenn mit Nachkommastellen, muss es mit einem Dezimalpunkt getrennt werden
+ \item[set] wandelt in sets um
+ \item[frozenset] wandelt in frozensets um
+ \item[bin] wandelt Integer in ein binären String der Form \kom{0b\dots} um
+ \item[oct] wandelt Integer in ein oktalen String der Form \kom{0o\dots} um
+ \item[hex] wandelt Integer in ein hexadezimalen String der Form \kom{0x\dots} um
+ \item[len] gibt die Anzahl der Elemente von Iterierbaren Datensätzen zurück (\kom{nur die erste Stufe})
+\end{itemize}
+
+\subsection{IO}
+\begin{itemize}
+\item[print] schreibt in die Konsole
+\item[input] gibt einen String zurück mit der Konsoleneingabe, der Wert in der Klammer wird zuerst in die Konsole geschrieben
+\lstinputlisting[language=Python, firstline=78, lastline=78]{SubTex/Code/DatenTypen.py}
+\end{itemize}
+
+\subsection{\kom{range}}
+Die range()-Funktion kreirt ein range-Objekt, welches iterierbar bar ist. Mit dieser
+Funktion lassen sich sehr gut Listen initialisieren.
+\lstinputlisting[language=Python, firstline=83, lastline=85]{SubTex/Code/DatenTypen.py}
+Start ist inklusive, stop ist exklusive. Step gibt die Schrittweite an, der Standart ist 1. Kann auch in
+negativer richtung (mit einem minus) durchlaufen werden (start und stop müssen angepasst werden).
+
